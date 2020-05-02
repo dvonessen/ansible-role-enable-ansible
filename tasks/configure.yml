@@ -24,7 +24,7 @@
 - name: enable sudo for ansible user
   template:
     src: etc/sudoers.d/ansible.j2
-    dest: etc/sudoers.d/ansible
+    dest: /etc/sudoers.d/ansible
     owner: root
     group: root
     mode: 0600
