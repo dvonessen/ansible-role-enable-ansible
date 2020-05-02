@@ -3,3 +3,8 @@
   package:
     name: "{{ enable_ansible_shell | basename }}"
     state: present
+
+- name: ensure sudo is installed
+  package:
+    name: sudo
+    state: present
