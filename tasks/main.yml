@@ -1,0 +1,20 @@
+---
+- name: import preflight.yml
+  import_tasks: preflight.yml
+  tags:
+    - enable_ansible_all
+    - enable_ansible_preflight
+
+- name: import install.yml
+  import_tasks: install.yml
+  become: true
+  tags:
+    - enable_ansible_all
+    - enable_ansible_install
+
+- name: import configure.yml
+  import_tasks: configure.yml
+  become: true
+  tags:
+    - enable_ansible_all
+    - enable_ansible_configure

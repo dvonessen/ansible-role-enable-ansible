@@ -1,0 +1,5 @@
+---
+- name: ensure that shell is installed
+  package:
+    name: "{{ enable_ansible_shell | basename }}"
+    state: present

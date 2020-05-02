@@ -1,0 +1,32 @@
+---
+- name: create ansible group
+  group:
+    name: "{{ enable_ansible_groupname }}"
+    gid: "{{ enable_ansible_gid }}"
+
+- name: create ansible user
+  user:
+    name: "{{ enable_ansible_username }}"
+    comment: ansible
+    create_home: yes
+    uid: "{{ enable_ansible_uid }}"
+    group: ansible
+    shell: "{{ enable_ansible_shell }}"
+    state: present
+
+- name: copy public key to authorized_key file
+  authorized_key:
+    key: "{{ item }}"
+    state: present
+    user: "{{ enable_ansible_username }}"
+  loop: "{{ enable_ansible_authorized_pub_keys }}"
+
+- name: enable sudo for ansible user
+  template:
+    src: etc/sudoers.d/ansible.j2
+    dest: etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0600
+  become: true
+  when: enable_ansible_group_sudo | bool

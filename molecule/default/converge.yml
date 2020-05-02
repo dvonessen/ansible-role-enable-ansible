@@ -1,0 +1,19 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-role-enable-ansible"
+      include_role:
+        name: "ansible-role-enable-ansible"
+      vars:
+        enable_ansible_authorized_pub_keys:
+          - >
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMFLMOyoGrZIRiMwTzTMBTG344Zh
+            Z/hXwH7zy7FIulVDoIBOzGBY/xyNFyjA7mdjMeUUxooMGZH95E+WVQLmXjuRpXmePE
+            p6qxZXpspvbWJ99SHdZBBX17JvwJNxGJqw5+EDuUPwxNdV4DbPUoNbcaMgHjrAB8F3
+            C9AZ5u1Fn8XvMhgyQeuovUdFp53BEmaOkMiG0732vCPKNAUS7XLlxMjm2f8yRRaM2p
+            wi1yy9v6ZnKlAw6/tZXHPZ2FgsSPz/mL14WvJsVtTjw3PFp2j/ippg1yFjeIxxmjp4
+            lrLn0G1BxvhTQUqCVsCG3g3fEiAO7sVUiQqw+V6fHhwH9RGTMZjGL0U0Q9MTI6KGcA
+            7r9ThR4STYxIuGW2AI66pTO4JW68SlSlF/9xHye9pvN3h8Iw17wsjtgpo3AQWxCFaY
+            rtRaZeeL3nuAZfKMuNIROjOA1+Mldqd9Yo7UEuXUpr00/QG5F4TyTMvNLYOJO2yn20
+            gqsr20v+rm8USUt9KWpn9N8= ansible

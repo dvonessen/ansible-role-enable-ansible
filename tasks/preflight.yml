@@ -1,0 +1,6 @@
+---
+- name: ensure that enable_ansible_authorized_pub_keys is initialized
+  assert:
+    that: enable_ansible_authorized_pub_keys | length > 0
+    fail_msg: You have to set at least one public key for ansible user.
+    success_msg: Public key(s) present for ansible user.

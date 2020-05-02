@@ -1,0 +1,10 @@
+---
+enable_ansible_username: ansible
+enable_ansible_uid: 9999
+enable_ansible_shell: /bin/bash
+enable_ansible_authorized_pub_keys: []
+
+enable_ansible_groupname: ansible
+enable_ansible_gid: 9999
+
+enable_ansible_group_sudo: true
