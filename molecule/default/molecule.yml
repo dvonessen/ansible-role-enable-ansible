@@ -5,13 +5,13 @@ driver:
   name: docker
 platforms:
   - name: enableansiblecentos8
-    image: registry.gitlab.com/dvonessen/docker-ansible-nonroot-centos:8
+    image: registry.gitlab.com/dvonessen/docker-molecule-nonroot/centos:8
     pre_build_image: true
   - name: enableansibledebian10
-    image: registry.gitlab.com/dvonessen/docker-ansible-nonroot-debian:10
+    image: registry.gitlab.com/dvonessen/docker-molecule-nonroot/debian:10
     pre_build_image: true
   - name: enableansibleubuntu2004
-    image: registry.gitlab.com/dvonessen/docker-ansible-nonroot-ubuntu:20.04
+    image: registry.gitlab.com/dvonessen/docker-molecule-nonroot/ubuntu:20.04
     pre_build_image: true
 provisioner:
   name: ansible
