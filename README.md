@@ -9,15 +9,18 @@ By default this role creates an user `ansible` and corresponding group `ansible`
 ## Role Variables
 
 
-| Name                                 |   Default   | Description                                               |
-| :----------------------------------- | :---------: | --------------------------------------------------------- |
-| `enable_ansible_username`            |  `ansible`  | Username for ansible user.                                |
-| `enable_ansible_uid`                 |   `9999`    | UID of ansible user.                                      |
-| `enable_ansible_shell`               | `/bin/bash` | Default shell for ansible user.                           |
-| `enable_ansible_authorized_pub_keys` |     []      | Public key to add to authorized_key file. (**MANDATORY**) |
-| `enable_ansible_groupname`           |  `ansible`  | Groupname of ansible user primary group.                  |
-| `enable_ansible_gid`                 |   `9999`    | UID of primary group.                                     |
-| `enable_ansible_group_sudo`          |   `true`    | Enable `sudo` without entering password                   |
+| Name                                 |   Default   | Description                                                                                                                                                                            |
+| :----------------------------------- | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enable_ansible_username`            |  `ansible`  | Username for ansible user.                                                                                                                                                             |
+| `enable_ansible_username_password`   |     ""      | Set password for ansible user. It has to be hased See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module |
+| `enable_ansible_uid`                 |   `9999`    | UID of ansible user.                                                                                                                                                                   |
+| `enable_ansible_shell`               | `/bin/bash` | Default shell for ansible user.                                                                                                                                                        |
+| `enable_ansible_authorized_pub_keys` |     []      | Public key to add to authorized_key file. (**MANDATORY**)                                                                                                                              |
+| `enable_ansible_groupname`           |  `ansible`  | Groupname of ansible user primary group.                                                                                                                                               |
+| `enable_ansible_gid`                 |   `9999`    | UID of primary group.                                                                                                                                                                  |
+| `enable_ansible_group_sudo`          |   `true`    | Enable `sudo` without entering password                                                                                                                                                |
+| `enable_ansible_sudo_nopasswd`       |   `false`   | If true you do not have to enter a password to escalate privilieges for `sudo`.                                                                                                        |
+
 
 ## Role Tags
 

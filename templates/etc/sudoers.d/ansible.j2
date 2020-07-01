@@ -1,2 +1,2 @@
 # {{ ansible_managed }}
-%{{ enable_ansible_groupname }} ALL=(ALL) NOPASSWD: ALL
+%{{ enable_ansible_groupname }} ALL=(ALL) {% if enable_ansible_sudo_nopasswd %} NOPASSWD: {% endif %}ALL

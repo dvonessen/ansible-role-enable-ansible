@@ -12,6 +12,7 @@
     uid: "{{ enable_ansible_uid }}"
     group: ansible
     shell: "{{ enable_ansible_shell }}"
+    password: "{{ enable_ansible_username_password }}"
     state: present
 
 - name: copy public key to authorized_key file

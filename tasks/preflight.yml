@@ -1,4 +1,12 @@
 ---
+- name: ensure that enable_ansible_username_password is inititalized
+  assert:
+    that: enable_ansible_username_password | length > 0
+    fail_msg: |
+      You have to specify ansible as an encrypted string.
+      See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module
+    success_msg: Password is set.
+
 - name: ensure that enable_ansible_authorized_pub_keys is initialized
   assert:
     that: enable_ansible_authorized_pub_keys | length > 0

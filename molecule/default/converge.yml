@@ -17,3 +17,5 @@
             7r9ThR4STYxIuGW2AI66pTO4JW68SlSlF/9xHye9pvN3h8Iw17wsjtgpo3AQWxCFaY
             rtRaZeeL3nuAZfKMuNIROjOA1+Mldqd9Yo7UEuXUpr00/QG5F4TyTMvNLYOJO2yn20
             gqsr20v+rm8USUt9KWpn9N8= ansible
+        enable_ansible_username_password: $6$secretsalt$zNxS3gCtNljOkgt3rICoQFrVNSByzM.t58.WNAryVTF5nAihr2v.qAliDE.zukPuz/gzY1BW9YghfrG65o3td1
+        enable_ansible_sudo_nopasswd: true

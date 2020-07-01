@@ -1,5 +1,7 @@
 ---
 enable_ansible_username: ansible
+enable_ansible_username_password: ""
+enable_ansible_sudo_nopasswd: false
 enable_ansible_uid: 9999
 enable_ansible_shell: /bin/bash
 enable_ansible_authorized_pub_keys: []
