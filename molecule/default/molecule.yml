@@ -13,6 +13,9 @@ platforms:
   - name: enableansibleubuntu2004
     image: registry.gitlab.com/dvonessen/docker-molecule-nonroot/ubuntu:20.04
     pre_build_image: true
+  - name: enableansiblearchlinux
+    image: registry.gitlab.com/dvonessen/docker-molecule-nonroot/archlinux:latest
+    pre_build_image: true
 provisioner:
   name: ansible
   config_options:
